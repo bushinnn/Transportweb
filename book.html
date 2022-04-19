@@ -1,0 +1,256 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/img/fav.png" rel="icon" height="800px">
+    <title>Trans-Easy</title>
+    <!-- css styles start here -->
+
+        <style>
+            /* body starts here */
+            body{
+                margin: 0;
+                padding: 0; 
+                font-family: cursive;
+                color: black;
+                background-color: bisque;
+            }
+             /* body ends here */
+
+
+            /* header starts here */
+            header{
+                background-color: sienna;
+                padding: 20px;
+                text-align: center;
+                color: bisque;
+                width: 100%;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+
+            }
+            header h1{
+                border: 4px dashed bisque;
+                display: inline-block;
+                border-radius: 28px;
+                padding: 12px;
+            }
+           /* header ends here */
+
+            /* form starts here */
+            form{ 
+                 margin: 190px;
+                 color: black;
+                }
+            form p{
+                font-size: 18px;
+                letter-spacing: 0.1em;
+            }
+            
+
+            input[type="radio"] {
+                opacity: 0;
+                margin: 0;
+                width: 0;
+           }
+           label[for="cal"],
+           label[for="nat"] {
+                margin-bottom: 10px;
+                display: inline-block;
+                padding-left: 26px;
+                background: url(img/checks.png) no-repeat;
+                background-position: 0 -32px;
+                line-height: 24px;
+                cursor: pointer;
+            }
+            input:checked + label[for="cal"],
+            input:checked + label[for="nat"] {
+                background-position: 0 0;
+                color: red;
+            }
+
+
+            input[type="checkbox"]{
+                opacity: 0;
+                width: 0;
+                margin: 0;
+            }
+            label[for="air"], label[for="land"],
+            label[for="water"]{
+                display: inline-block;
+                margin-bottom: 10px;
+                padding-left: 26px;
+                background: url(img/checks.png) no-repeat;
+                background-position: 0 -98px;
+                line-height: 24px;
+                cursor: pointer;
+            }
+            input:checked + label[for="air"],
+            input:checked + label[for="land"],
+            input:checked + label[for="water"]{
+                background-position: 0 -65px;
+                color: red;
+            }
+
+        fieldset{
+            padding: 20px;
+            margin: 20px 0;
+            border: 3px solid #222;
+        }
+        legend{
+            padding: 10px;
+            font-size: 18px;
+            letter-spacing: 0.1em;
+        }
+        input[type="email"],
+        input[type="telephone"]{
+            display: block;
+            margin-bottom: 20px;
+            padding: 10px 10px 10px 50px;
+            border: 0;
+            border-radius: 4px;
+            background: url(img/inputs.png) no-repeat;
+            background-color:#222 ;
+            font-size: 16px;
+            color: #fff;
+            float: left;
+            clear: both;
+        }
+        input[type="email"]{
+            background-position: 7px 8px;
+        }
+        input[type="telephone"]{
+            background-position: 7px -58px;
+        }
+        select{
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                -o-apperance: none;
+                -ms-apperance: none;
+                appearance: none;
+                display: block;
+                margin: 30px 0;
+                padding: 10px 50px 10px 10px;
+                background: url(img/select.png) no-repeat 95% center;
+                background-color: #222;
+                color: #fff;
+                border-radius: 4px;
+                border: 2px solid white;
+                width: 280px;
+        }
+        input[type="submit"]{
+            background-color: #b61111;
+            padding: 15px;
+            color: #fff;
+            font-size: 20px;
+            letter-spacing: 0.1em;
+            border-radius: 4px;
+            border: 0;
+            box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
+            width: 280px;
+        }
+        input[type="email"]:valid,
+        input[type="telephone"]:valid{
+            border: 2px solid #fff;
+        }
+        input[type="email"]:valid{
+            background-position: 7px -22px;
+        }
+        input[type="telephone"]:valid{
+            background-position: 7px -97px;
+        }
+        input[type="email"]:valid + .tick ,
+        input[type="telephone"]:valid + .tick{
+            background: url(img/tick.png) center;
+            background-size: 100%;
+            display: block;
+            width: 20px;
+            height: 20px;
+            float: left;
+            margin: 10px;
+        }
+        /* form ends here */
+
+        /* main starts here */
+        main{
+           margin: 20px 40px 50px 50px;
+           font-size: 21px;
+           color: black;
+           text-align: center;
+        }
+        /* main ends here */
+
+        /* footer starts here */
+        footer{
+            background-color: sienna;
+            padding: 10px;
+            text-align: center;
+            font-size: 20px;
+       }
+       /* footer ends here */
+        </style>
+
+
+    <!-- css styles ends here -->
+  </head>
+  <body>
+
+      <!-- header starts here -->
+    <header>
+        <h1>Trans-Easy</h1>
+    </header>
+    
+    <!-- header ends here -->
+
+    <form>
+      <!-- Gender -->
+      <p>Your prefered location...</p>
+      <input type="radio" name="location" id="cal">
+      <label for="cal">Local</label><br>
+      <input type="radio" name="location" id="nat">
+      <label for="nat">International</label>
+    
+
+      <!-- Interests -->
+      <p>Your means of transportation...</p>
+      <input type="checkbox" name="place" id="air" />
+      <label for="air">Air</label><br/>
+      <input type="checkbox" name="place" id="land" />
+      <label for="land">Land</label><br/>
+      <input type="checkbox" name="place" id="water" />
+      <label for="water">Water</label>
+
+      <!-- Contact details -->
+      <fieldset>
+        <legend>Contact Info</legend>
+        <input type="email" placeholder="Email" required />
+        <span class="tick"></span>
+        <input type="telephone" placeholder="Phone number" required />
+        <span class="tick"></span>
+      </fieldset>
+      <!-- Preferred -->
+      <p>How would you like to be contacted?</p>
+      <select>
+        <option>By email</option>
+        <option>By telephone</option>
+      </select>
+      <input type="submit" value="Hit here to book" />
+    </form>
+    <main>
+        <h3>Book a ride with us...</h3>
+        <p>Here, you get to select your means of transportation, select your preferable location. <br>
+        You get to provide your contact so we can easily get in touch with you :)</p>
+    </main>
+   
+    <footer>
+        <p class="copyright">Copyright 2022 Bushhhhhhh</p>
+        <p>
+            <a href="https://web.facebook.com/?_rdc=1&_rdr"> <img src="/img/icon-facebook.svg" alt=""></a> 
+            <a href="https://www.instagram.com/"> <img src="/img/icon-instagram.svg" alt=""></a>
+            <a href="https://www.pinterest.com/pin/2533343530615457/"> <img src="/img/icon-pinterest.svg" alt=""></a>
+             <a href="www.twitter.com"><img src="/img/icon-twitter.svg" alt=""></a>
+        </p>
+      </footer>
+  </body>
+</html>
